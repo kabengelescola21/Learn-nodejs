@@ -1,5 +1,10 @@
 const express = require('express');
 const app = express();
+const route = require('router');
+app.use('/static', express.static(__dirname + '/public'));
+//load controller
+var appController = require('/routes/appController')
+
 
 app.put('/user', function create(req, res) {
     res.send('ok')
