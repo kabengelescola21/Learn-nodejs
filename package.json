@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/kabengelescola21/Learn-nodejs#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "router": "^1.3.3"
   }
 }
