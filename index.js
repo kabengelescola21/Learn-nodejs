@@ -2,10 +2,15 @@ const express = require('express');
 const app = express();
 const route = require('router');
 app.use('/static', express.static(__dirname + '/public'));
+var myLogger = function(req, res, next){
+    console.log('LOGGED');
+    next();
+};
 //load controller
-var appController = require('/routes/appController')
 
+//var appController = require('/routes/appController')
 
+app.use(myLogger);
 app.put('/user', function create(req, res) {
     res.send('ok')
 });
